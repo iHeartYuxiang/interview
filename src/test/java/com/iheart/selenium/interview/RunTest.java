@@ -44,7 +44,6 @@ public class RunTest {
         Page.setDriver (driver);
        
         Page.getErrors().delete(0, Page.getErrors().length());
-        
          //Wait for page to load
         WaitUtility.sleep(5000);
     }

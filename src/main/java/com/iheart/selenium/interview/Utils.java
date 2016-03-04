@@ -90,31 +90,6 @@ public class Utils {
 	
 	  }
 	
-	public static WebDriver  createRemoteDriver(CapabilitySetting setting) 
-	{  
-		WebDriver driver;
-		
-		DesiredCapabilities caps = new DesiredCapabilities();
-	    caps.setCapability("browser", setting.getBrowser());
-	    caps.setCapability("browser_version", setting.getBrowserVersion());
-	    caps.setCapability("os", setting.getOsName());
-	    caps.setCapability("os_version", setting.getOs_version());
-	    caps.setCapability("browserstack.debug", "true");
-	   
-	    try{
-	       driver = new RemoteWebDriver(new URL(browserStack_URL), caps);
-	    }catch(Exception e)
-	    {
-	    	e.printStackTrace();
-	    	return null;
-	    }
-	    driver.manage().window().maximize();
-	
-	    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-	
-	    return driver;
-	
-	  }
 	
 	public static WebDriver  createRemoteDriver(String browser,String browserVersion, String osName, String os_version) 
 	{  
@@ -186,17 +161,7 @@ public class Utils {
 	
 	}
 	
-	public static WebDriver launchBrowserInCloud(String url, CapabilitySetting setting)
-	{
-			WebDriver driver = createRemoteDriver(setting);
-			
-			driver.get(url);
-			
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			
-			return driver;
 	
-	}
 	
 	public static int getRandomInt()
 	{
