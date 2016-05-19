@@ -57,6 +57,7 @@ public class Utils {
 	      //System.setProperty("webdriver.chrome.driver", "C:\\Users\\1111128\\git\\drivers\\chromedriver.exe");
 	    // System.setProperty("webdriver.chrome.driver", "/Users/1111128/git/drivers/chromedriver");
 	  	  
+	  	  System.out.println("Try out PullRequest");
 	  
 	      ChromeOptions options = new ChromeOptions();
 	      options.addArguments("test-type");
